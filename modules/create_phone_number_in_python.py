@@ -1,8 +1,10 @@
 def create_phone_number(phone_number: list[int]) -> str:
-    if phone_number == [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]:
-        return "(111) 111-1111"
-    if phone_number == [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]:
-        return "(123) 456-7890"
-    if phone_number == [5, 5, 5, 4, 2, 1, 7, 6, 5, 0]:
-        return "(555) 421-7650"
-    raise ValueError("❗️ Input should be a list")
+    if not isinstance(phone_number, list):
+        raise ValueError("❗️ Input should be a list")
+    if any(not isinstance(number, int) for number in phone_number):
+        raise ValueError("❗️ Input should be a list of integers")
+    return (
+        f"({phone_number[0]}{phone_number[1]}{phone_number[2]})"
+        f" {phone_number[3]}{phone_number[4]}{phone_number[5]}"
+        f"-{phone_number[6]}{phone_number[7]}{phone_number[8]}{phone_number[9]}"
+    )
