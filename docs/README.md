@@ -7,3 +7,17 @@
 [![Can I Deploy main to test](https://gotreasa.pactflow.io/pacticipants/create_phone_number_in_python_app/branches/main/latest-version/can-i-deploy/to-environment/test/badge)](https://gotreasa.pactflow.io/hal-browser/browser.html#https://gotreasa.pactflow.io/pacticipants/create_phone_number_in_python_app/branches/main/latest-version/can-i-deploy/to-environment/test/badge)
 
 Welcome to the Python Template created via a cookiecutter recipe. The project template is designed for a development via a `Double Loop approach` (BDD-TDD) using pytest and several other pytest libs.
+
+## Description
+
+Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+
+Example
+
+```python
+create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) # => returns "(123) 456-7890"
+```
+
+The returned format must be correct in order to complete this challenge.
+
+Don't forget the space after the closing parentheses!
