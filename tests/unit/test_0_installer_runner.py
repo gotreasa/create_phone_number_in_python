@@ -1,9 +1,9 @@
-from modules import create_phone_number
+import pytest
+from modules import create_phone_number_in_python
 
 
-def describe_dummy_kata():
-    def should_print_title(capsys):
-        """🧪 expect the dummy kata prints the title"""
-        create_phone_number.print_the_title()
-        out, _err = capsys.readouterr()
-        assert "😊 Welcome to Dummy Kata" in out
+def describe_create_phone_number():
+    def should_error_when_not_list():
+        """🧪 should give an error when something other than a list is passed"""
+        with pytest.raises(ValueError, match="❗️ Input should be a list"):
+            create_phone_number_in_python.create_phone_number("blah")
