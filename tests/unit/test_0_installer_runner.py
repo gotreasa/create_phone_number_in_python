@@ -15,3 +15,7 @@ def describe_create_phone_number():
     def should_give_phone_number_for_1234567890():
         """🧪 should return (123) 456-7890 when the input is [1234567890]"""
         assert create_phone_number_in_python.create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) == "(123) 456-7890"
+
+    def should_give_phone_number_for_5554217650():
+        """🧪 should return (555) 421-7650 when the input is [5554217650]"""
+        assert create_phone_number_in_python.create_phone_number([5, 5, 5, 4, 2, 1, 7, 6, 5, 0]) == "(555) 421-7650"
